@@ -1,0 +1,27 @@
+body{
+    font-family: 'Mulish', sans-serif;
+}
+.painel-pontos{
+    position: absolute;
+    left: 285px;
+    right: 427px;
+    top: 128px;
+    background: #FFFFFF;
+    width: 736px;
+    height: 462px;
+}
+.titulo, .data {
+    color: rgba(37.00000159442425, 39.00000147521496, 51.00000075995922, 1);
+    width: 400px;
+    height: 21px;
+    position: absolute;
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 0.40px;
+}
+.select2-container .select2-selection--single {
+    height: 38px !important;
+}
+.select2-selection__arrow {
+    height: 38px !important;
+}

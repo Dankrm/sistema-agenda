@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="django" name="Django">
+      <configuration>
+        <option name="rootFolder" value="$MODULE_DIR$" />
+        <option name="settingsModule" value="projetosistemaponto/settings.py" />
+        <option name="manageScript" value="manage.py" />
+        <option name="environment" value="&lt;map/&gt;" />
+        <option name="doNotUseTestRunner" value="false" />
+        <option name="trackFilePattern" value="migrations" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/venv" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="imask" level="application" />
+    <orderEntry type="library" name="ionicons" level="application" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/home/templates/home" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/forms/jinja2/django/forms/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/forms/templates/django/forms/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/views/templates" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/gis/templates/gis" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/gis/templates/gis/admin" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/auth/templates/auth/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/includes" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/registration" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/postgres/jinja2/postgres/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/postgres/templates/postgres/widgets" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/docs" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/docs/_layouts" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/docs/_includes" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/UI" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/forms" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/charts" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/layout" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/tables" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/mailbox" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/pages/examples" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/jsgrid/demos" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/raphael/dev" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/raphael/dev/test" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/daterangepicker/example/amd" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/daterangepicker/example/browserify" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/static/admin-lte/plugins/daterangepicker/website" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/templates/adminlte" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/templates/adminlte/lib" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/templates/adminlte/pages" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3/templates/adminlte/components" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3_theme/templates/admin" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3_theme/templates/admin/lib" />
+        <option value="$MODULE_DIR$/venv/Lib/site-packages/adminlte3_theme/templates/admin/includes" />
+        <option value="$MODULE_DIR$/cargo/templates/cargo" />
+        <option value="$MODULE_DIR$/static/lib" />
+        <option value="$MODULE_DIR$/static/admin-lte" />
+        <option value="$MODULE_DIR$/static/admin-lte/docs" />
+        <option value="$MODULE_DIR$/static/admin-lte/docs/_layouts" />
+        <option value="$MODULE_DIR$/static/admin-lte/docs/_includes" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/UI" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/forms" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/charts" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/layout" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/tables" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/mailbox" />
+        <option value="$MODULE_DIR$/static/admin-lte/pages/examples" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/jsgrid/demos" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/raphael/dev" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/raphael/dev/test" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/daterangepicker/example/amd" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/daterangepicker/example/browserify" />
+        <option value="$MODULE_DIR$/static/admin-lte/plugins/daterangepicker/website" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/templates/lib" />
+        <option value="$MODULE_DIR$/departamento/templates/departamento" />
+      </list>
+    </option>
+  </component>
+</module>

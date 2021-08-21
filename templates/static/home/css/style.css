@@ -1,0 +1,85 @@
+#home .table .separator{
+
+}
+#home .table .separator td{
+    border-top: 1px solid #DFE0EB;
+
+}
+#home .table thead th{
+    color: #9FA2B4;
+    font-weight: bold;
+    text-align: center;
+}
+#home .table tbody tr{
+
+}
+#home .table tbody td {
+    color: #000;
+    font-size: 19px;
+    font-weight: 700;
+}
+#home .table tbody th{
+    color: #9FA2B4;
+    border-right: 1px solid #DFE0EB;
+}
+#home .banco-horas{
+    background: #FFFFFF;
+    border: 1px solid #3751FF;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+#home .banco-horas .saldo{
+    color: #3751FF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#home .banco-horas h5{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #9FA2B4;
+}
+#home .pendencias{
+    background: #FFFFFF;
+    border: 1px solid #FF9900;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+#home .pendencias strike{
+    border: 2px solid rgba(255, 153, 0, 0.25);
+    border-radius: 8px;
+}
+#home .pendencias .qtd-pendencias{
+    color: #FF9900;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#home .pendencias h5{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #9FA2B4;
+}
+table.table-fit {
+    table-layout: auto !important;
+}
+table.table-fit thead th:first-child{
+    width: 7rem;
+}
+table.table-fit tbody th:first-child {
+    width: 7rem;
+}
