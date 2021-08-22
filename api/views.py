@@ -34,7 +34,7 @@ def validate_login(request):
 class CompromissoViewSet(viewsets.ModelViewSet):
     serializer_class = CompromissoSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['idcontato']
+    filterset_fields = ['idcontato','data']
 
     def get_queryset(self):
         """
@@ -53,5 +53,5 @@ class ContatoViewSet(viewsets.ModelViewSet):
     queryset = Contato.objects.all()
     serializer_class = ContatoSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['idusuario']
+    filterset_fields = ['idusuario', 'nome']
 

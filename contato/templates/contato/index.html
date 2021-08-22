@@ -20,7 +20,8 @@
                             <tr class="align-middle">
                                 <td class="pl-2 align-middle">{{ contato.idcontato }}</td>
                                 <td class="align-middle">{{ contato.nome }}</td>
-                                <td class="align-middle" data-inputmask="'mask': ['(99)9999-9999','(99)99999-9999']" data-mask="" inputmode="text">{{ contato.fone }}</td>
+                                <td class="align-middle" data-inputmask="'mask': ['(99)9999-9999','(99)99999-9999']"
+                                    data-mask="" inputmode="text">{{ contato.fone }}</td>
                                 <td class="col-md-1 align-middle text-center">
                                     <button class="btn btn-sm btn-edit" data-id="{{ contato.idcontato }}"><i
                                             class="fas fa-edit"></i></button>
@@ -38,6 +39,10 @@
                     <button id="adicionar" data-toggle="modal" data-target="#modal-adicionar" type="button"
                             class="btn btn-danger font-weight-bold">+ Adicionar
                     </button>
+                    <form id="form-busca" class="bg-white d-flex flex-column p-2 mt-3">
+                        <input type="text" name="busca" class="form-control">
+                        <button id="buscar" type="submit" class="mt-2 btn btn-dark font-weight-bold">Buscar</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -67,7 +72,9 @@
                             </div>
                             <div class="form-group">
                                 <label>Telefone</label>
-                                <input type="text" name="fone" class="form-control" data-inputmask="'mask': ['(99)9999-9999','(99)99999-9999']" data-mask="" inputmode="text" required id="id_fone">
+                                <input type="text" name="fone" class="form-control"
+                                       data-inputmask="'mask': ['(99)9999-9999','(99)99999-9999']" data-mask=""
+                                       inputmode="text" required id="id_fone">
                                 <span class="error invalid-feedback"></span>
                             </div>
                         </div>
@@ -99,6 +106,36 @@
                 $('#modal-adicionar').modal('show');
             }
 
+            $("#form-busca").submit(function (e) {
+                e.preventDefault();
+                var busca = $('[name="busca"]');
+                const csrftoken = getCookie('csrftoken');
+                $.ajax({
+                    type: 'GET',
+                    url: url+"?nome="+busca.val(),
+                    dataType: "json",
+                    headers: {'X-CSRFToken': csrftoken},
+                    success: function (response) {
+                        $("#form-internal tbody").html('');
+
+                        $.each(response, function (index, element) {
+                            $("#form-internal tbody").prepend(
+                                `<tr class="align-middle">
+                                <td class="pl-2 align-middle">${element.idcontato || ""}</td>
+                                <td class="align-middle">${element.nome || ""}</td>
+                                <td class="align-middle" data-inputmask="'mask': ['(99)9999-9999','(99)99999-9999']" data-mask="" inputmode="text">${element.fone || ""}</td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-edit" data-id="${element.idcontato || ""}"><i class="fas fa-edit"></i></button></td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-delete" data-id="${element.idcontato || ""}"><i class="fas fa-trash"></i></button></td>
+                               </tr>`
+                            );
+                        });
+
+                    },
+                    error: function (response) {
+
+                    }
+                });
+            });
             $("#form-add").submit(function (e) {
                 e.preventDefault();
                 const serializedData = $(this).serialize();
