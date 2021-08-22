@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'home.apps.HomeConfig',
-    'login.apps.LoginConfig',
     'api.apps.ApiConfig',
     'compromisso.apps.CompromissoConfig',
     'contato.apps.ContatoConfig',

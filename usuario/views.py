@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404,reverse
+from django.shortcuts import render, reverse, HttpResponseRedirect
 from .models import Usuario
 
 
@@ -7,3 +7,8 @@ def index(request):
     return render(request, 'usuario/index.html', {
         'usuarios': usuarios
     })
+
+
+def logout(request):
+    request.session['usuario_id'] = None
+    return HttpResponseRedirect('/')
