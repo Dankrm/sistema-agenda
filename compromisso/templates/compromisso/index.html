@@ -20,7 +20,7 @@
                             <tr class="align-middle">
                                 <td class="pl-2 align-middle">{{ compromisso.idcompromisso }}</td>
                                 <td class="align-middle">{{ compromisso.idcontato.nome }}</td>
-                                <td class="align-middle">{{ compromisso.data }}</td>
+                                <td class="align-middle">{{ compromisso.data|date:"d/m/Y" }}</td>
                                 <td class="col-md-1 align-middle text-center">
                                     <button class="btn btn-sm btn-edit" data-id="{{ compromisso.idcompromisso }}"><i
                                             class="fas fa-edit"></i></button>
@@ -111,7 +111,7 @@
                 e.preventDefault();
                 const descricao = $('[name="descricao"]').val();
                 const local = $('[name="local"]').val();
-                const data = $('[name="data"]').val();
+                const data = $('[name="data"]').val().split('/').reverse().join('-');
                 const idcontato = $('[name="idcontato"]').val();
                 const idusuario = $('[name="idusuario"]').val();
                 const csrftoken = getCookie('csrftoken');
@@ -124,18 +124,19 @@
                             local:local,
                             data:data,
                             idcontato:idcontato,
-                            idusuario:idusuario
+                            usuario:idusuario
                         }),
+                        contentType: "application/json",
                         headers: {'X-CSRFToken': csrftoken},
                         success: function (response) {
                             const instance = response;
                             $("#form-internal tbody").prepend(
                                 `<tr class="align-middle">
-                                <td class="pl-2 align-middle">${instance.idccompromisso || ""}</td>
+                                <td class="pl-2 align-middle">${instance.idcompromisso || ""}</td>
                                 <td class="align-middle">${instance.idcontato || ""}</td>
-                                <td class="align-middle" data-inputmask="'mask': ['99/99/9999']" data-mask="" inputmode="date">${instance.data || ""}</td>
-                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-edit" data-id="${instance.idccompromisso || ""}"><i class="fas fa-edit"></i></button></td>
-                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-delete" data-id="${instance.idccompromisso || ""}"><i class="fas fa-trash"></i></button></td>
+                                <td class="align-middle" data-inputmask="'mask': ['99/99/9999']" data-mask="" inputmode="date">${instance.data.split('-').reverse().join('/') || ""}</td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-edit" data-id="${instance.idcompromisso || ""}"><i class="fas fa-edit"></i></button></td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-delete" data-id="${instance.idcompromisso || ""}"><i class="fas fa-trash"></i></button></td>
                                </tr>`
                             );
                             $("#modal-adicionar").modal('hide');
@@ -151,23 +152,24 @@
                 } else if (action.val() === "edit") {
                     $.ajax({
                         type: 'PUT',
-                        url: url + $('[name="idcontato"]').val() + "/",
+                        url: url + $('[name="idcompromisso"]').val() + "/",
                         data: JSON.stringify({
                             descricao: descricao,
                             local:local,
                             data:data,
                             idcontato:idcontato,
-                            idusuario:idusuario
+                            usuario:idusuario
                         }),
+                        contentType: "application/json",
                         headers: {'X-CSRFToken': csrftoken},
                         success: function (response) {
                             const instance = response;
                             lastRow.html(
-                                ` <td class="pl-2 align-middle">${instance.idccompromisso || ""}</td>
+                                ` <td class="pl-2 align-middle">${instance.idcompromisso || ""}</td>
                                 <td class="align-middle">${instance.idcontato || ""}</td>
-                                <td class="align-middle" data-inputmask="'mask': ['99/99/9999']" data-mask="" inputmode="date">${instance.data || ""}</td>
-                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-edit" data-id="${instance.idccompromisso || ""}"><i class="fas fa-edit"></i></button></td>
-                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-delete" data-id="${instance.idccompromisso || ""}"><i class="fas fa-trash"></i></button></td>`
+                                <td class="align-middle" data-inputmask="'mask': ['99/99/9999']" data-mask="" inputmode="date">${instance.data.split('-').reverse().join('/') || ""}</td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-edit" data-id="${instance.idcompromisso || ""}"><i class="fas fa-edit"></i></button></td>
+                                <td class="col-md-1 align-middle text-center"><button class="btn btn-sm btn-delete" data-id="${instance.idcompromisso || ""}"><i class="fas fa-trash"></i></button></td>`
                             );
                             $("#modal-adicionar").modal('hide');
                         },
